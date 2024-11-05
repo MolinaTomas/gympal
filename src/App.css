@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  background-color: #f0f0f0;
   height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,8 +50,25 @@
   flex-direction: column;
 }
 
+.label-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #3a404b;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.label-field span {
+  width: 150px;
+  text-align: center;
+  margin-right: 10px;
+}
+
 .input-field {
-  margin-left: 20px;
+  max-width: 200px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -67,10 +85,4 @@
 
 .submit-button:hover {
   background-color: #21a1f1;
-}
-
-.label-field {
-  background-color: rgb(11, 25, 37);
-  border-radius: 40px;
-  padding: 20px;
 }

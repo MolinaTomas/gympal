@@ -1,27 +1,23 @@
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AnimatedBackground } from 'animated-backgrounds';
+import MainPage from './MainPage';
+import LoginPage from './LoginPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>¡Bienvenido GymPal!</h1>
-        <div className="login-container">
-          <form className="login-form">
-            <label className='label-field'>
-              Correo Electrónico
-              <input type="email" name="email" required className="input-field" />
-            </label>
-            <br />
-            <label className='label-field'>
-              Contraseña
-              <input type="password" name="password" required className="input-field" />
-            </label>
-            <br />
-            <button type="submit" className="submit-button">Iniciar Sesión</button>
-          </form>
-        </div>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <AnimatedBackground animationName="auroraBorealis" />
+        <header className="App-header">
+          <Routes>
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/main" element={<MainPage />} />
+          </Routes>
+        </header>
+      </div>
+    </Router>
   );
 }
 
