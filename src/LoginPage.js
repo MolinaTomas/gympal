@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import gymLogo from './weightLogoColor.png'
 
 const LoginPage = () => {
     const [nombreUsuario, setNombreUsuario] = useState('');
@@ -16,11 +17,11 @@ const LoginPage = () => {
         setError('');
 
         if (isRegistering) {
-            // Lógica para crear cuenta
+            // creaci[on de cuenta
             console.log('Creando cuenta:', { email, edad, altura, password });
-            // Aquí puedes agregar la lógica para enviar los datos al servidor
+            // TODO agregar logica de creacion, decidir si es con mail o username
         } else {
-            // Lógica para iniciar sesión
+            // iniciar sesión
             try {
                 const response = await fetch('http://localhost:8080/api/socios/login', {
                     method: 'POST',
@@ -46,6 +47,7 @@ const LoginPage = () => {
 
     return (
         <div className="login-container">
+            <img src={gymLogo} className='gymLogo'></img>
             <h1>¡Bienvenido GymPal!</h1>
             <h2>{isRegistering ? 'Crear Cuenta' : 'Inicio de Sesión'}</h2>
             <form className="login-form" onSubmit={handleSubmit}>

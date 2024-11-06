@@ -75,3 +75,8 @@
 .toggle-button:hover {
   color: #21a1f1;
 }
+
+.gymLogo {
+  width: 150px;
+  height: 150px;
+}
