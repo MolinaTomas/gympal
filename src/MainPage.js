@@ -9,13 +9,22 @@ const MainPage = () => {
         <div className="main-page">
             <nav className="navbar">
                 <div className="user-info">
-                    <img src={userPic} alt="Usuario" className="user-icon" />
+                    <img src={userPic} alt="picUsuario" className="user-icon" />
                     <span className="user-name">{nombreUsuario}</span>
                 </div>
             </nav>
             <div className="content">
-                <h2>Contenido Principal</h2>
-                <p>Hola</p>
+                <div className="container">
+                    <div className="column">
+                        <h2>Mediciones</h2>
+                    </div>
+                    <div className="column">
+                        <h2>Entrenamientos</h2>
+                    </div>
+                    <div className="column">
+                        <h2>Objetivo</h2>
+                    </div>
+                </div>
             </div>
         </div>
     );

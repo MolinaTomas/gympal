@@ -8,17 +8,6 @@
   align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   padding: 20px;
@@ -27,19 +16,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .login-container {
   margin-top: 20px;
@@ -85,4 +61,17 @@
 
 .submit-button:hover {
   background-color: #21a1f1;
+}
+
+.toggle-button {
+  margin-top: 10px;
+  background-color: transparent;
+  color: #61dafb;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.toggle-button:hover {
+  color: #21a1f1;
 }
